@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JspandServletAssignment</display-name>
+  <servlet>
+    <servlet-name>AddShowServletMain</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.AddShowServletMain</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddShowServletMain</servlet-name>
+    <url-pattern>/AddShowServletMain</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogoutServletTicket</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.LogoutServletTicket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServletTicket</servlet-name>
+    <url-pattern>/LogoutServletTicket</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DisplayMovieServlet</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.DisplayMovieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayMovieServlet</servlet-name>
+    <url-pattern>/DisplayMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DisplayAllShowsServlet</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.DisplayAllShowsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayAllShowsServlet</servlet-name>
+    <url-pattern>/DisplayAllShowsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CustomerDetailsServlet</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.CustomerDetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerDetailsServlet</servlet-name>
+    <url-pattern>/CustomerDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteMovieShowServlet</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.DeleteMovieShowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteMovieShowServlet</servlet-name>
+    <url-pattern>/DeleteMovieShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TicketBookingServlet</servlet-name>
+    <servlet-class>onlineMovieTicketBooking.TicketBookingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TicketBookingServlet</servlet-name>
+    <url-pattern>/TicketBookingServlet</url-pattern>
+  </servlet-mapping>
+   <filter>
+    <filter-name>LoginAuthenticationFilter</filter-name>
+    <filter-class>onlineMovieTicketBooking.LoginAuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginAuthenticationFilter</filter-name>
+    <url-pattern>/AddShowServletMain</url-pattern>
+    <url-pattern>/DisplayAllShowsServlet</url-pattern>
+    <url-pattern>/CustomerForm.jsp</url-pattern>
+    <url-pattern>/DisplayBookingHistory.jsp</url-pattern>
+    <url-pattern>/Display.jsp</url-pattern>
+     <url-pattern>/Error.jsp</url-pattern>
+      <url-pattern>/Home.jsp</url-pattern>
+       <url-pattern>/NoSeats.jsp</url-pattern>
+        <url-pattern>/ShowFullError.jsp</url-pattern>
+        <url-pattern>/TicketBooked.jsp</url-pattern>
+        <url-pattern>/WelcomeUser.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>AddShowLoginFilter</filter-name>
+    <filter-class>onlineMovieTicketBooking.AddShowLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AddShowLoginFilter</filter-name>
+    <url-pattern>/AddShowServletMain</url-pattern>
+  </filter-mapping>
+  
+  
+    <filter>
+    <filter-name>WelcomeUserFilter</filter-name>
+    <filter-class>onlineMovieTicketBooking.WelcomeUserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>WelcomeUserFilter</filter-name>
+    <url-pattern>/DisplayMovieServlet</url-pattern>
+  </filter-mapping>
+  
+  
+<!--     <filter> -->
+<!--     <filter-name>CustomerFormFilter</filter-name> -->
+<!--     <filter-class>onlineMovieTicketBooking.CustomerFormFilter</filter-class> -->
+<!--   </filter> -->
+<!--   <filter-mapping> -->
+<!--     <filter-name>CustomerFormFilter</filter-name> -->
+<!--     <url-pattern>/CustomerDetailServlet</url-pattern> -->
+<!--   </filter-mapping> -->
+ </web-app> 
